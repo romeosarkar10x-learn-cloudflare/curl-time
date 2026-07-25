@@ -2,7 +2,7 @@ local group = vim.api.nvim_create_augroup("prettier_on_save", { clear = true })
 
 vim.api.nvim_create_autocmd("BufWritePost", {
     group = group,
-    pattern = { "*.ts", "*.tsx", "*.astro", "*.json", "*.yaml", "*.yml", "*.md" },
+    pattern = { "*.ts", "*.json", "*.jsonc", "*.yaml", "*.yml", "*.md" },
     callback = function(args)
         local bufnr = args.buf
         local path = vim.api.nvim_buf_get_name(bufnr)
