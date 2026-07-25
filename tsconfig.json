@@ -12,6 +12,7 @@
         "types": ["./worker-configuration.d.ts", "node"],
         // For nodejs:
         "lib": ["esnext"],
+        "allowImportingTsExtensions": true,
         // "types": ["node"],
         // and npm install -D @types/node
 
