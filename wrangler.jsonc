@@ -12,6 +12,7 @@
     "env": {
         "dev": {
             "name": "hello-world-dev",
+            "preview_urls": false,
             "main": "src/index.ts",
             "vars": {
                 "MESSAGE": "THIS IS A TEST MESSAGE",
