@@ -2,3 +2,5 @@
 
 /.wrangler
 /worker-configuration.d.ts
+
+/tmp
