@@ -1,0 +1,17 @@
+{
+    "compatibility_date": "2025-07-25",
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
+    "env": {
+        "dev": {
+            "name": "hello-world-dev",
+            "main": "src/index.ts",
+            "vars": {
+                "MESSAGE": "Hello world!"
+            }
+        },
+        "staging": {},
+        "production": {}
+    }
+}
