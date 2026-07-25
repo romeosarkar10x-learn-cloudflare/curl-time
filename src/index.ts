@@ -20,9 +20,13 @@ export default {
         (async function loop() {
             const writer = writable.getWriter();
 
-            for (let i = 0; i < 20; i++) {
+            /* for (let i = 0; i < 20; i++) {
                 writer.write(`${i}\n`);
                 await sleep(500);
+            } */
+
+            for (let i = 0; i < 1000000; i++) {
+                writer.write(`${i}\n`.repeat(1000));
             }
 
             writer.close();
