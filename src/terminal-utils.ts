@@ -90,9 +90,9 @@ export async function writeTime(writer: TerminalWriter) {
     await writer.write(ENTER_ALTERNATE_SCREEN);
     await writer.write(HIDE_CURSOR);
 
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 4 * 60 * 2; i++) {
         terminalUtils.writeLineLeftToRight(getTime());
-        await sleep(200);
+        await sleep(250);
         await writer.write(CLEAR_SCREEN);
     }
 
