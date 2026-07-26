@@ -4,9 +4,10 @@
     "description": "",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "type-check": "tsc",
         "typegen": "wrangler types",
         "format": "prettier --write '**/*.{ts,json,jsonc,yml,yaml}'",
-        "format:check": "prettier --check '**/*.{ts,json,jsonc}'",
+        "format:check": "prettier --check '**/*.{ts,json,jsonc,yml,yaml}'",
         "deploy": "wrangler deploy --env dev"
     },
     "keywords": [],
