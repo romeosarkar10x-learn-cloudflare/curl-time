@@ -3,7 +3,7 @@ name: Type check
 on: workflow_call
 
 jobs:
-    format_check:
+    type_check:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
