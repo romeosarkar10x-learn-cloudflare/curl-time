@@ -10,6 +10,11 @@
     },
 
     "env": {
+        "time": {
+            "name": "time",
+            "preview_urls": false,
+            "main": "src/index.ts",
+        },
         "dev": {
             "name": "hello-world-dev",
             "preview_urls": false,
