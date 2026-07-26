@@ -9,21 +9,23 @@
         },
     },
 
+    "account_id": "11621d3ecc35da8dd9318f7a0e5b35c2",
+
     "env": {
-        "time": {
+        "dev": {
+            "name": "time-dev",
+            "preview_urls": false,
+            "main": "src/index.ts",
+        },
+        "staging": {
+            "name": "time-staging",
+            "preview_urls": false,
+            "main": "src/index.ts",
+        },
+        "production": {
             "name": "time",
             "preview_urls": false,
             "main": "src/index.ts",
         },
-        "dev": {
-            "name": "hello-world-dev",
-            "preview_urls": false,
-            "main": "src/index.ts",
-            "vars": {
-                "MESSAGE": "THIS IS A TEST MESSAGE",
-            },
-        },
-        "staging": {},
-        "production": {},
     },
 }
