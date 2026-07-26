@@ -1,0 +1,27 @@
+name: Deploy (staging)
+
+on: workflow_call
+
+jobs:
+    deploy_staging:
+        environment: staging
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v7
+
+            - name: Setup node
+              uses: actions/setup-node@v7
+              with:
+                  node-version: latest
+
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v6
+
+            - name: Install dependencies
+              run: pnpm install
+
+            - name: Deploy (staging)
+              run: pnpm exec wrangler deploy --env staging
+              env:
+                  CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
