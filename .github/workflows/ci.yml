@@ -6,18 +6,18 @@ on:
 
 jobs:
     format_check:
-        uses: ./format-check.yml
+        uses: ./.github/workflows/format-check.yml
 
     type_check:
         needs: format_check
-        uses: ./type-check.yml
+        uses: ./.github/workflows/type-check.yml
 
     deploy_staging:
         needs: type_check
-        uses: ./deploy-staging.yml
+        uses: ./.github/workflows/deploy-staging.yml
         secrets: inherit
 
     deploy:
         needs: deploy_staging
-        uses: ./deploy.yml
+        uses: ./.github/workflows/deploy.yml
         secrets: inherit
